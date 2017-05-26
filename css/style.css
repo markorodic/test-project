@@ -180,7 +180,7 @@ input[type=number]::-webkit-outer-spin-button {
     color: #aaa; }
 
 .submit {
-  height: 85px;
+  height: 80px;
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -234,10 +234,13 @@ button {
   height: 42px;
   width: 300px;
   margin-top: 3px;
-  opacity: 1;
+  opacity: 0;
   border: none; }
   button:focus {
     outline: none; }
+
+.success {
+  display: none; }
 
 @media only screen and (max-width: 755px) {
   .title {
@@ -257,6 +260,7 @@ button {
   body {
     -webkit-tap-highlight-color: white; }
   .container {
+    margin-top: -20px;
     height: 100vh; }
   .title {
     width: 340px;
@@ -295,7 +299,7 @@ button {
     margin-top: -45px; }
   form {
     width: 250px;
-    height: 190px;
+    height: 295px;
     margin-top: 0px; }
   .field input {
     width: 180px;
@@ -321,20 +325,27 @@ button {
       opacity: 1;
       color: #aaa; }
   .submit {
-    height: 260px;
+    margin-top: 40px;
+    height: auto;
     width: 200px; }
     .submit input {
-      height: 100px;
+      height: 90px;
       width: 200px;
       font-size: 12px;
-      transform: translateY(-140px);
+      transform: translateY(-170px);
       -webkit-appearance: none; }
   @keyframes intro {
     0% {
-      transform: translateY(-140px); }
+      transform: translateY(-140px);
+      color: white;
+      background: #0075c9; }
     100% {
-      transform: translateY(40px); } }
+      transform: translateY(0px);
+      background: white;
+      color: #0075c9; } }
   button {
-    height: 36px;
+    background: red;
+    height: 42px;
     width: 200px;
-    margin-top: 205px; } }
+    margin-top: 305px;
+    opacity: 0; } }
