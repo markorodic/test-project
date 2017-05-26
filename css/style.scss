@@ -78,18 +78,8 @@ h1 {
     width: auto;
     color: #ff671d;
     border-bottom: 1px solid $border;
-    animation: change-to-white 3s ease-in infinite;
   }
 
-}
-
-@keyframes change-to-white {
-  85% {
-    color: #ff671d;
-  }
-  100% {
-    color: white;
-  }
 }
 
 .para {
