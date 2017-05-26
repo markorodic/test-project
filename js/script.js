@@ -13,6 +13,7 @@ window.onload = function() {
 	var check = document.getElementsByClassName('check')[0]
 	var change = document.getElementsByClassName('para')[0]
 	var discard = document.getElementsByClassName('container-three')[0]
+	var success = document.getElementsByClassName('success')[0]
 
 	button.addEventListener("click", function() {
 
@@ -29,13 +30,11 @@ window.onload = function() {
 
 	
 	var form = document.getElementsByClassName('form');
-	var success = document.getElementsByClassName('success');
 
 	form[0].onsubmit = function() {
-		// form[0].style.display = "none"
-		// form[0].classList.add('fadeOut')
+		success.style.display = "block"
 		form[0].style.display = "none"
-		success[0].innerHTML = "Great! We'll be in touch soon."
+		success.style.display = "block"
 		return false;
 	}
 
