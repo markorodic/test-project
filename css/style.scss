@@ -14,7 +14,6 @@ body {
   overflow: hidden;
   background: linear-gradient(top left, #ffffff 0%, #e5e5e5 100%);
   color: $textdarker;
-  background: lightblue;
 }
 
 header {
@@ -237,6 +236,16 @@ input[type=number]::-webkit-outer-spin-button {
     line-height: 15px;
   }
 
+  input {
+    opacity: 1;
+  }
+
+  label {
+    margin-left: -120px;
+    opacity: 1;
+    color: $textlighter;
+  }
+
 }
 
 .submit {
@@ -352,7 +361,7 @@ button {
   }
 
   img {
-    height: 12px;
+    height: 10px;
     margin-left: 20px;
     margin-top: -5px;
   }
@@ -371,19 +380,21 @@ button {
   h1 {
     font-size: 40px;
     line-height: 28px;
-  }
 
-  h1:nth-child(2) {
-    width: auto;
+    &:h1:nth-child(2) {
+      width: auto;
+    }
+
   }
 
   .para {
     width: 70%;
     margin-top: 5px;
-  }
 
-  p {
-    font-size: 13px;
+    p {
+      font-size: 13px;
+    }
+
   }
 
   .container-two {
@@ -402,24 +413,14 @@ button {
     border-radius: 0;
     font-size: 16px;
     -webkit-appearance: none;
+
+    &::placeholder {
+      padding: 0px;
+      font-size: 14px;
+    }
+
   }
 
-  input::placeholder {
-    padding: 0px;
-    font-size: 14px;
-  }
-
-  .btn {
-    width: 200px;
-    height: 100%;
-    padding: 10px 0px 28px 0px;
-    background: rgb(0, 117, 201);
-    -webkit-appearance: none;
-    font-size: 14px;
-    border-radius: 2px;
-    transform: translateY(-140px);
-  }
-  
   .check {
     width: 200px;
     max-width: 200px;   
@@ -428,15 +429,22 @@ button {
   .submit {
     height: 260px;
     width: 200px;
-    display: flex;
-    flex-direction: column;
+
+    input {
+      height: 100%;
+      width: 200px;
+      font-size: 12px;
+      transform: translateY(-140px);
+    }
+
   }
+
   @keyframes intro {
     0% {
       transform: translateY(-140px);
     }
     100% {
-      transform: translateY(30px);
+      transform: translateY(40px);
     }
   }
 }

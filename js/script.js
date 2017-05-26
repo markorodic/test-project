@@ -21,7 +21,7 @@ window.onload = function() {
 		field[0].classList.add('fadein')
 		field[1].classList.add('fadein')
 		field[2].classList.add('fadein')
-		// check.classList.add('fadein')
+		check.classList.add('fadein')
 		// button.style.display = "none"
 		discard.style.display = "none"
 	})
