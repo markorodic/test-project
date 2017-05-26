@@ -306,11 +306,10 @@ input {
 }
 
 button {
-  background: green;
   height: 42px;
   width: 300px;
   margin-top: 3px;
-  opacity: 0.5;
+  opacity: 0;
   border: none;
 
   &:focus {
@@ -351,7 +350,6 @@ button {
   and (-webkit-min-device-pixel-ratio: 2) { 
   body {
     -webkit-tap-highlight-color: white;
-    background: orange;
   }
 
   .container {
@@ -501,8 +499,22 @@ button {
     height: 70px;
     width: 200px;
     margin-top: -35px;
-/*    opacity: 0;*/
   }
+}
+
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  body {
+    -webkit-tap-highlight-color: white;
+  }
+    button {
+    margin-top: -95px;
+    opacity: 0;
+  }
+
 }
 
 /*tablet*/
@@ -613,6 +625,6 @@ button {
     height: 39px;
     width: 370px;
     margin-top: 98px;
-/*    opacity: 0;*/
+    opacity: 0;
   }
 }
