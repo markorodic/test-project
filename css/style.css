@@ -260,7 +260,7 @@ button {
   body {
     -webkit-tap-highlight-color: white; }
   .container {
-    margin-top: -20px;
+    margin-top: -40px;
     height: 100vh; }
   .title {
     width: 340px;
@@ -292,15 +292,15 @@ button {
         width: auto; }
   .para {
     width: 70%;
-    margin-top: 5px; }
+    margin-top: -25px; }
     .para p {
-      font-size: 13px; }
+      font-size: 12px; }
   .container-two {
     margin-top: -45px; }
   form {
     width: 250px;
     height: 295px;
-    margin-top: 0px; }
+    margin-top: 50px; }
   .field input {
     width: 180px;
     height: 14px;
