@@ -456,7 +456,7 @@ button {
 }
 
 
-/*iPhone 6*/
+/*iPhone 6 and up*/
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 750px) 
@@ -609,10 +609,27 @@ button {
   }
 
   button {
-    background: red;
     height: 40px;
     width: 200px;
     margin-top: -34px;
+    opacity: 0;
+  }
+}
+
+/*iPhone 5*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) { 
+  body {
+    -webkit-tap-highlight-color: white;
+  }
+
+  .container {
+    margin-top: -65px;
+  }
+
+  button {
+    margin-top: 15px;
     opacity: 0;
   }
 }

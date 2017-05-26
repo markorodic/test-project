@@ -1,4 +1,4 @@
-//module 2 - Continuous title change
+//Continuous title change
 (function() {
 	var titleText = document.getElementsByTagName('h1')
 	var typesOfJobs = ["Accountants", "Estate Agents", "Mechanics", "small businesses"]
@@ -44,7 +44,7 @@ window.onload = function() {
 
 	})
 
-	// Display success message
+	//Display success message
 	document.getElementsByClassName('form')[0].onsubmit = function() {
 
 		var message = document.getElementsByClassName('success')[0]
