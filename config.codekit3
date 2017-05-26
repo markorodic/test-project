@@ -32,16 +32,28 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/design\/Sketches.png": {
+	"\/design\/1. Ideas.rtf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/design\/1. Ideas.rtf",
+		"oF": 0
+		},
+	"\/design\/2. Sketches.png": {
 		"ft": 32768,
 		"iS": 1065873,
 		"oA": 0,
-		"oAP": "\/design\/Sketches.png",
+		"oAP": "\/design\/2. Sketches.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"\/design\/3. Mockup - iwoca.sketch": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/design\/3. Mockup - iwoca.sketch",
+		"oF": 0
 		},
 	"\/img\/Error.png": {
 		"ft": 32768,
@@ -99,12 +111,6 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
-		},
-	"\/Mockup - iwoca.sketch": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/Mockup - iwoca.sketch",
-		"oF": 0
 		}
 	},
 "hooks": [
