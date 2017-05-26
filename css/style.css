@@ -109,8 +109,6 @@ h4 {
     outline: none;
     border-bottom: 2px solid #0075c9;
     transform: scaleX(1.1); }
-  .field input:valid {
-    border-bottom: 2px solid #5cb85c; }
 
 .fadein {
   animation: fadein 3s forwards; }
@@ -153,6 +151,8 @@ input {
   input:focus::placeholder {
     opacity: 0;
     transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  input:valid {
+    border-bottom: 2px solid #5cb85c; }
   input:invalid:not(:focus):not(:placeholder-shown) {
     border-bottom: 2px solid #ec6b69; }
 
@@ -329,14 +329,14 @@ button {
     height: auto;
     width: 200px; }
     .submit input {
-      height: 90px;
+      height: 110px;
       width: 200px;
       font-size: 12px;
-      transform: translateY(-170px);
+      transform: translateY(-210px);
       -webkit-appearance: none; }
   @keyframes intro {
     0% {
-      transform: translateY(-140px);
+      transform: translateY(-210px);
       color: white;
       background: #0075c9; }
     100% {
@@ -345,7 +345,7 @@ button {
       color: #0075c9; } }
   button {
     background: red;
-    height: 40px;
+    height: 35px;
     width: 200px;
-    margin-top: 210px;
+    margin-top: 47px;
     opacity: 0; } }
