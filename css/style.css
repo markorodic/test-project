@@ -28,7 +28,9 @@ header {
 
 .container {
   width: 100%;
+  min-width: 100%;
   height: 90vh;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,11 +52,10 @@ h1 {
   color: black;
   margin: 8px;
   font-weight: 300; }
-
-h1:nth-child(2) {
-  width: auto;
-  border-bottom: #ddd;
-  animation: change-to-white 3s ease-in infinite; }
+  h1:nth-child(2) {
+    width: auto;
+    border-bottom: #ddd;
+    animation: change-to-white 3s ease-in infinite; }
 
 @keyframes change-to-white {
   85% {
@@ -155,9 +156,6 @@ input {
   input:invalid:not(:focus):not(:placeholder-shown) {
     border-bottom: 2px solid #ec6b69; }
 
-button:focus {
-  outline: none; }
-
 /*input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
@@ -236,22 +234,26 @@ button {
   height: 42px;
   width: 300px;
   margin-top: 3px;
-  opacity: 0;
+  opacity: 1;
   border: none; }
+  button:focus {
+    outline: none; }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 755px) {
   .title {
     flex-direction: column;
     align-items: center;
     margin-left: 0px; }
+    .title h1 {
+      font-size: 50px; }
   button {
     height: 42px;
     width: 300px;
-    margin-top: 90px;
+    margin-top: 65px;
     border: none;
     opacity: 0; } }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 750px) and (-webkit-min-device-pixel-ratio: 2) {
   body {
     -webkit-tap-highlight-color: white; }
   .container {
@@ -275,11 +277,15 @@ button {
     font-weight: 400; }
   .change {
     height: 34px; }
-  h1 {
-    font-size: 40px;
-    line-height: 28px; }
-    h1:h1:nth-child(2) {
-      width: auto; }
+  .title {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px; }
+    .title h1 {
+      font-size: 35px;
+      line-height: 28px; }
+      .title h1:h1:nth-child(2) {
+        width: auto; }
   .para {
     width: 70%;
     margin-top: 5px; }
@@ -291,28 +297,44 @@ button {
     width: 250px;
     height: 190px;
     margin-top: 0px; }
-  input {
-    width: 170px;
+  .field input {
+    width: 180px;
     height: 14px;
     border-radius: 0;
     font-size: 16px;
     -webkit-appearance: none; }
-    input::placeholder {
+    .field input::placeholder {
       padding: 0px;
       font-size: 14px; }
   .check {
     width: 200px;
-    max-width: 200px; }
+    max-width: 200px;
+    height: 60px;
+    display: flex;
+    opacity: 0; }
+    .check input {
+      opacity: 1;
+      height: 25px;
+      width: 25px; }
+    .check label {
+      margin-left: 10px;
+      opacity: 1;
+      color: #aaa; }
   .submit {
     height: 260px;
     width: 200px; }
     .submit input {
-      height: 100%;
+      height: 100px;
       width: 200px;
       font-size: 12px;
-      transform: translateY(-140px); }
+      transform: translateY(-140px);
+      -webkit-appearance: none; }
   @keyframes intro {
     0% {
       transform: translateY(-140px); }
     100% {
-      transform: translateY(40px); } } }
+      transform: translateY(40px); } }
+  button {
+    height: 36px;
+    width: 200px;
+    margin-top: 205px; } }
