@@ -20,11 +20,13 @@ header {
   header div {
     display: flex;
     margin: 15px; }
-    header div h3 {
+    header div a {
       margin-left: 30px;
       color: #aaa;
       font-size: 12px;
-      font-weight: 400; }
+      font-weight: 400;
+      text-decoration: none;
+      z-index: 10; }
 
 .container {
   width: 100%;
@@ -44,9 +46,6 @@ header {
   justify-content: flex-start;
   flex-wrap: wrap; }
 
-/*.bottom {
-  width: 360px;
-}*/
 h1 {
   font-size: 60px;
   color: black;
@@ -54,12 +53,13 @@ h1 {
   font-weight: 300; }
   h1:nth-child(2) {
     width: auto;
-    border-bottom: #ddd;
+    color: #ff671d;
+    border-bottom: 1px solid #ddd;
     animation: change-to-white 3s ease-in infinite; }
 
 @keyframes change-to-white {
   85% {
-    color: black; }
+    color: #ff671d; }
   95% {
     color: white; } }
 
@@ -74,7 +74,8 @@ h1 {
     color: #767676;
     font-weight: 300;
     opacity: 1;
-    line-height: 22px; }
+    line-height: 22px;
+    letter-spacing: 0.5px; }
 
 .container-two {
   height: 350px;
@@ -156,11 +157,6 @@ input {
   input:invalid:not(:focus):not(:placeholder-shown) {
     border-bottom: 2px solid #ec6b69; }
 
-/*input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}*/
 .check {
   width: 300px;
   max-width: 300px;
@@ -269,16 +265,16 @@ button {
     flex-direction: column;
     align-items: center; }
   header {
-    align-items: center; }
-  img {
-    height: 10px;
-    margin-left: 20px;
-    margin-top: -5px; }
-  h3 {
-    margin-left: 20px;
-    color: grey;
-    font-size: 10px;
-    font-weight: 400; }
+    align-items: center;
+    padding: 1px; }
+    header img {
+      height: 12px; }
+    header div a {
+      margin-top: 2px;
+      margin-left: 9px;
+      color: #aaa;
+      font-size: 10px;
+      font-weight: 400; }
   .change {
     height: 34px; }
   .title {
@@ -286,7 +282,7 @@ button {
     align-items: center;
     margin-left: 0px; }
     .title h1 {
-      font-size: 35px;
+      font-size: 40px;
       line-height: 28px; }
       .title h1:h1:nth-child(2) {
         width: auto; }
@@ -319,7 +315,8 @@ button {
     .check input {
       opacity: 1;
       height: 25px;
-      width: 25px; }
+      width: 25px;
+      border: none; }
     .check label {
       margin-left: 10px;
       opacity: 1;

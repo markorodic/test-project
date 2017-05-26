@@ -35,11 +35,13 @@ header {
       display: flex;
       margin: 15px;
 
-      h3 {
+      a {
         margin-left: 30px;
         color: $textlighter;
         font-size: 12px;
         font-weight: 400;
+        text-decoration: none;
+        z-index: 10;
       }
 
     }
@@ -66,10 +68,6 @@ header {
   flex-wrap: wrap;
 }
 
-/*.bottom {
-  width: 360px;
-}*/
-
 h1 {
   font-size: 60px;
   color: black;
@@ -78,7 +76,8 @@ h1 {
 
   &:nth-child(2) {
     width: auto;
-    border-bottom: $border;
+    color: #ff671d;
+    border-bottom: 1px solid $border;
     animation: change-to-white 3s ease-in infinite;
   }
 
@@ -86,7 +85,7 @@ h1 {
 
 @keyframes change-to-white {
   85% {
-    color: black;
+    color: #ff671d;
   }
   95% {
     color: white;
@@ -106,6 +105,7 @@ h1 {
     font-weight: 300;
     opacity: 1;
     line-height: 22px;
+    letter-spacing: 0.5px;
   }
 
 }
@@ -214,12 +214,6 @@ input {
   }
 
 }
-
-/*input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}*/
 
 .check {
   width: 300px;
@@ -372,19 +366,23 @@ button {
 
   header {
     align-items: center;
-  }
+    padding: 1px;
 
-  img {
-    height: 10px;
-    margin-left: 20px;
-    margin-top: -5px;
-  }
+    img {
+      height: 12px;
+    }
 
-  h3 {
-    margin-left: 20px;
-    color: grey;
-    font-size: 10px;
-    font-weight: 400;
+    div {
+
+      a {
+        margin-top: 2px;
+        margin-left: 9px;
+        color: $textlighter;
+        font-size: 10px;
+        font-weight: 400;
+      }
+
+    }
   }
 
   .change {
@@ -397,7 +395,7 @@ button {
     margin-left: 0px;
     
     h1 {
-      font-size: 35px;
+      font-size: 40px;
       line-height: 28px;
 
       &:h1:nth-child(2) {
@@ -457,6 +455,7 @@ button {
       opacity: 1;
       height: 25px;
       width: 25px;
+      border: none;
     }
 
     label {
