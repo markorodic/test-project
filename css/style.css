@@ -70,7 +70,6 @@ h1 {
   justify-content: center; }
   .para p {
     margin-top: 0px;
-    width: 220px;
     max-width: 400px;
     text-align: center;
     font-size: 15px;
@@ -294,7 +293,8 @@ button {
     width: 70%;
     margin-top: -25px; }
     .para p {
-      font-size: 13px; }
+      font-size: 13px;
+      width: 220px; }
   .container-two {
     margin-top: -45px; }
   form {
