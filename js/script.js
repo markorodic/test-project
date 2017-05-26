@@ -1,85 +1,57 @@
-window.scrollTo(0, 0);
+//module 2 - Continuous title change
+(function() {
+	var titleText = document.getElementsByTagName('h1')
+	var typesOfJobs = ["Accountants", "Estate Agents", "Mechanics", "small businesses"]
 
+	count = 0
+	setInterval(function(){
+	console.log(count)
+	  titleText[1].innerHTML = typesOfJobs[count%4]
+	  count++
 
+	}, 3000)
 
-window.onload = function() {
-	// document.getElementsByTagName('form')[0].addEventListener("submit", function(){
-	// 	alert()
-	// })
+})()
+
+window.onload = function() {	
 	
-	var button = document.getElementsByTagName('button')[0]
-	var btn = document.getElementsByTagName('input')[4]
-	var field = document.getElementsByClassName('field')
-	var check = document.getElementsByClassName('check')[0]
-	var change = document.getElementsByClassName('para')[0]
-	var discard = document.getElementsByClassName('container-three')[0]
-	var success = document.getElementsByClassName('success')[0]
+	//Open form on button click
+	document.getElementsByTagName('button')[0].addEventListener("click", function() {
 
-	button.addEventListener("click", function() {
+		var openForm = {
+			init: function() {
+				this.cacheDom()
+				this.render()
+			},
+			cacheDom: function() {
+				this.submitForm = document.getElementsByTagName('input')[4]
+				this.inputField = document.getElementsByClassName('field')
+				this.checkBox = document.getElementsByClassName('check')[0]
+				this.discardSection = document.getElementsByClassName('container-three')[0]
+			},
+			render: function() {
+				this.submitForm.classList.add('movedown')
+				this.submitForm.classList.add('colourme')
+				this.inputField [0].classList.add('fadein')
+				this.inputField [1].classList.add('fadein')
+				this.inputField [2].classList.add('fadein')
+				this.checkBox.classList.add('fadein')
+				this.discardSection.style.display = "none"
+			}
+		}
+		
+		openForm.init()
 
-		btn.classList.add('movedown')
-		btn.classList.add('colourme')
-		field[0].classList.add('fadein')
-		field[1].classList.add('fadein')
-		field[2].classList.add('fadein')
-		check.classList.add('fadein')
-		// button.style.display = "none"
-		discard.style.display = "none"
 	})
 
+	// Display success message
+	document.getElementsByClassName('form')[0].onsubmit = function() {
 
-	
-	var form = document.getElementsByClassName('form');
+		var message = document.getElementsByClassName('success')[0]
+		var form = document.getElementsByClassName('form')[0]
 
-	form[0].onsubmit = function() {
-		success.style.display = "block"
-		form[0].style.display = "none"
-		success.style.display = "block"
+		message.style.display = "block"
+		form.style.display = "none"
 		return false;
 	}
-
-	// var http = new XMLHttpRequest()
-
-	// http.onreadystatechange = function() {
- //    if (this.readyState == 4 && this.status == 200) {
- //    	console.log(http.response)
- //    	}
- //  	}
-
-	// http.open("GET", "", true)
-	// http.send()
 }
-
-var headers = document.getElementsByTagName('h1')
-
-var jobs = ["Accountants", "Estate Agents", "Mechanics", "small businesses"]
-var verbs = ["Simple", "Fast", "Fair", "Flexible"]
-
-
-count =0
-
-setInterval(function(){
-  headers[1].innerHTML = jobs[count%4]
-  count++
-}, 3000)
-
-
-
-// document.getElementsByTagName('h1')[0].innerHTML
-
-
-// document.getElementsByTagName('label')[0].style.display = "block"
-
-
-    // var data = new FormData();
-    // data.append('user', 'person');
-    // data.append('pwd', 'password');
-    // data.append('organization', 'place');
-    // data.append('requiredkey', 'key');
-    // var xhr = new XMLHttpRequest();
-    // xhr.open('POST', 'somewhere', true);
-    // xhr.onload = function () {
-    //     // do something to response 
-    //     console.log(this.responseText);
-    // };
-    // xhr.send(data);

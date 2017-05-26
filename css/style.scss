@@ -87,7 +87,7 @@ h1 {
   85% {
     color: #ff671d;
   }
-  95% {
+  100% {
     color: white;
   }
 }
@@ -242,7 +242,7 @@ input {
 }
 
 .submit {
-  height: 80px;
+  height: 90px;
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -343,6 +343,120 @@ button {
   }
 }
 
+/*tablet*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  body {
+    -webkit-tap-highlight-color: white;
+  }
+
+
+  .container {
+    margin-top: -20px;
+  }
+
+
+
+  .title {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    
+    h1 {
+      font-size: 60px;
+      line-height: 60px;
+
+      &:h1:nth-child(2) {
+        width: auto;
+      }
+
+    }
+
+  }
+
+  form {
+    width: 250px;
+    height: 295px;
+    margin-top: 50px;
+  }
+
+  .field {
+
+    label {
+      display: none;
+    }
+
+    input {
+      width: 350px;
+      border-radius: 0;
+      font-size: 20px;
+      -webkit-appearance: none;
+    }
+
+  }
+
+  .check {
+    width: 370px;
+    max-width: 370px;
+    height: 60px;
+    display: flex;
+    opacity: 0;
+
+    input {
+      opacity: 0.5;
+      height: 15px;
+      width: 15px;
+      border: 1px solid $textdarker;
+    }
+
+    label {
+      margin-left: 10px;
+      opacity: 1;
+      color: $textlighter;
+    }
+
+  }
+
+  .submit {
+    margin-top: 40px;
+    height: auto;
+    width: 200px;
+
+    input {
+      height: 130px;
+      width: 370px;
+      font-size: 12px;
+      transform: translateY(-210px);
+      -webkit-appearance: none;
+    }
+
+  }
+
+  @keyframes intro {
+    0% {
+      transform: translateY(-210px);
+      color: white;
+      background: $brandblue;
+    }
+    100% {
+      transform: translateY(0px);
+      background: white;
+      color: $brandblue;
+    }
+  }
+
+  button {
+    height: 39px;
+    width: 370px;
+    margin-top: 98px;
+    opacity: 0;
+  }
+}
+
+
+/*iPhone 6*/
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 750px) 
@@ -395,7 +509,7 @@ button {
     margin-left: 0px;
     
     h1 {
-      font-size: 40px;
+      font-size: 37px;
       line-height: 28px;
 
       &:h1:nth-child(2) {
@@ -411,7 +525,7 @@ button {
     margin-top: -25px;
 
     p {
-      font-size: 12px;
+      font-size: 11px;
     }
 
   }
@@ -475,7 +589,7 @@ button {
       height: 110px;
       width: 200px;
       font-size: 12px;
-      transform: translateY(-210px);
+      transform: translateY(-250px);
       -webkit-appearance: none;
     }
 
@@ -483,7 +597,7 @@ button {
 
   @keyframes intro {
     0% {
-      transform: translateY(-210px);
+      transform: translateY(-250px);
       color: white;
       background: $brandblue;
     }
@@ -496,9 +610,9 @@ button {
 
   button {
     background: red;
-    height: 35px;
+    height: 40px;
     width: 200px;
-    margin-top: 47px;
+    margin-top: -34px;
     opacity: 0;
   }
 }
