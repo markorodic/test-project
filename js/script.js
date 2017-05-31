@@ -1,7 +1,7 @@
 //Continuous title change
 (function() {
 	var titleText = document.getElementsByTagName('h1')
-	var typesOfJobs = ["Accountants", "Estate Agents", "Mechanics", "small businesses"]
+	var typesOfJobs = ["Accountants", "Estate Agents", "Mechanics", "Small Businesses"]
 
 	count = 0
 	setInterval(function(){
@@ -16,7 +16,7 @@
 window.onload = function() {	
 	
 	//Open form on button click
-	document.getElementsByTagName('button')[0].addEventListener("click", function() {
+	document.getElementsByClassName('submit')[0].addEventListener("click", function() {
 
 		var openForm = {
 			init: function() {
@@ -24,14 +24,13 @@ window.onload = function() {
 				this.render()
 			},
 			cacheDom: function() {
-				this.submitForm = document.getElementsByTagName('input')[4]
+				this.submitForm = document.getElementsByClassName('submit')[0]
 				this.inputField = document.getElementsByClassName('field')
 				this.checkBox = document.getElementsByClassName('check')[0]
 				this.discardSection = document.getElementsByClassName('container-three')[0]
 			},
 			render: function() {
 				this.submitForm.classList.add('movedown')
-				this.submitForm.classList.add('colourme')
 				this.inputField [0].classList.add('fadein')
 				this.inputField [1].classList.add('fadein')
 				this.inputField [2].classList.add('fadein')
@@ -41,7 +40,6 @@ window.onload = function() {
 		}
 		
 		openForm.init()
-
 	})
 
 	//Display success message
