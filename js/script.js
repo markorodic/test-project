@@ -5,7 +5,6 @@
 
 	count = 0
 	setInterval(function(){
-	console.log(count)
 	  titleText[1].innerHTML = typesOfJobs[count%4]
 	  count++
 
@@ -24,18 +23,18 @@ window.onload = function() {
 				this.render()
 			},
 			cacheDom: function() {
+				this.button = document.getElementsByTagName('input')[4]
 				this.submitForm = document.getElementsByClassName('submit')[0]
 				this.inputField = document.getElementsByClassName('field')
 				this.checkBox = document.getElementsByClassName('check')[0]
-				this.discardSection = document.getElementsByClassName('container-three')[0]
 			},
 			render: function() {
+				this.button.classList.add('fadeToBlue')
 				this.submitForm.classList.add('movedown')
 				this.inputField [0].classList.add('fadein')
 				this.inputField [1].classList.add('fadein')
 				this.inputField [2].classList.add('fadein')
 				this.checkBox.classList.add('fadein')
-				this.discardSection.style.display = "none"
 			}
 		}
 		

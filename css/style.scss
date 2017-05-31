@@ -136,6 +136,7 @@ h4 {
   margin: 20px;
   transform: scaleX(1);
   opacity: 0;
+  pointer-events:none;
 
   & input:focus {
     outline: none;
@@ -201,12 +202,11 @@ h4 {
 @keyframes fadein {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: 1;
+    pointer-events:none;
   }
   100% {
     opacity: 1;
+    pointer-events:auto;
   }
 }
 
@@ -234,19 +234,20 @@ h4 {
   height: auto;
   width: auto;
   transform: translateY(-240px);
+  background: $brandblue;
+  color: white;
 
   input {
     height: 50px;
     width: 300px;
     margin-top: 0px;
     padding: 0px;
-    background: $brandblue;
+    background: none;
     border: 2px solid $brandblue;
-    border-radius: 2px;
-    color: white;
     font-size: 14px;
     opacity: 1;
     pointer-events:none;
+    color: white;
   }
 
 }
@@ -265,6 +266,19 @@ h4 {
     background: white;
     color: $brandblue;
     transform: translateY(30px);
+  }
+}
+
+.fadeToBlue {
+    animation: blueFade 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+@keyframes blueFade {
+  0% {
+    color: white;
+  }
+  100% {
+    color: $brandblue;
   }
 }
 
@@ -457,7 +471,8 @@ h4 {
     padding: 1px;
 
     img {
-      height: 12px;
+      height: 13px;
+      width: auto;
     }
 
     div {
@@ -556,21 +571,14 @@ h4 {
   }
 
   .submit {
-    margin-top: 40px;
-    height: auto;
-    width: 200px;
 
     input {
-      height: 110px;
-      width: 200px;
-      font-size: 12px;
-      transform: translateY(-250px);
       -webkit-appearance: none;
     }
 
   }
 
-  @keyframes intro {
+  /*@keyframes intro {
     0% {
       transform: translateY(-250px);
       color: white;
@@ -581,13 +589,7 @@ h4 {
       background: white;
       color: $brandblue;
     }
-  }
-
-  button {
-    height: 70px;
-    width: 200px;
-    margin-top: -35px;
-  }
+  }*/
 }
 
 @media only screen 
