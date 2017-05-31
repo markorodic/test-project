@@ -211,6 +211,7 @@ h4 {
 }
 
 .check {
+  width: 300px;
   max-width: 300px;
   height: auto;
   opacity: 0;
@@ -220,9 +221,11 @@ h4 {
     align-items: flex-start;
     color: black;
     color: $textlighter;
-    font-size: 12px;
+    font-size: 11px;
+    text-align: left;
 
     input {
+      margin-left: 25px;
     }
   }
 }
@@ -293,12 +296,8 @@ h4 {
       margin: 15px;
 
       a {
-        margin-left: 13px;
-        color: $textlighter;
-        font-size: 10px;
-        font-weight: 400;
-        text-decoration: none;
-        z-index: 10;
+        margin-left: 24px;
+        font-size: 11px;
       }
 
     }
@@ -349,6 +348,7 @@ h4 {
 
   .submit {
     width: auto;
+
     input {
       height: 40px;
       width: 260px;
@@ -363,6 +363,17 @@ h4 {
     img {
       height: 16px;
       width: auto;
+    }
+
+    div {
+      display: flex;
+      margin: 15px;
+
+      a {
+        margin-left: 12px;
+        font-size: 10px;
+      }
+
     }
 
   }
