@@ -451,6 +451,7 @@ h4 {
   and (-webkit-min-device-pixel-ratio: 2) { 
   body {
     -webkit-tap-highlight-color: white;
+    overflow: hidden;
   }
 
   .container {

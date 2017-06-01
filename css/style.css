@@ -297,7 +297,8 @@ h4 {
 /*iPhone 6/7*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 750px) and (-webkit-min-device-pixel-ratio: 2) {
   body {
-    -webkit-tap-highlight-color: white; }
+    -webkit-tap-highlight-color: white;
+    overflow: hidden; }
   .container {
     margin-top: -40px;
     height: 100vh; }
