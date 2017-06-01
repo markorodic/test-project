@@ -579,22 +579,10 @@ h4 {
 
     input {
       -webkit-appearance: none;
+      pointer-events: auto;
     }
 
   }
-
-  /*@keyframes intro {
-    0% {
-      transform: translateY(-250px);
-      color: white;
-      background: $brandblue;
-    }
-    100% {
-      transform: translateY(0px);
-      background: white;
-      color: $brandblue;
-    }
-  }*/
 }
 
 /*tablet*/
