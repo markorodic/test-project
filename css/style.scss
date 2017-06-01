@@ -533,6 +533,7 @@ h4 {
 
   .field {
     margin-top: -5px;
+    pointer-events:auto;
 
     input {
       width: 180px;
@@ -649,6 +650,7 @@ h4 {
   }
 
   .field {
+    pointer-events:auto;
 
     label {
       display: none;
