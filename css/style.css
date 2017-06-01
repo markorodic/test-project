@@ -183,7 +183,8 @@ h4 {
     border: 2px solid #0075c9;
     font-size: 14px;
     opacity: 1;
-    color: white; }
+    color: white;
+    pointer-events: none; }
 
 .movedown {
   animation: intro 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards; }
@@ -203,9 +204,11 @@ h4 {
 
 @keyframes blueFade {
   0% {
-    color: white; }
+    color: white;
+    pointer-events: none; }
   100% {
-    color: #0075c9; } }
+    color: #0075c9;
+    pointer-events: auto; } }
 
 ::-webkit-input-placeholder {
   color: lightgrey; }
