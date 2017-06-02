@@ -136,7 +136,6 @@ h4 {
   margin: 20px;
   transform: scaleX(1);
   opacity: 0;
-  pointer-events:none;
 
   & input:focus {
     outline: none;
@@ -165,6 +164,10 @@ h4 {
     font-size: 18px;
     transform: scaleX(1);
     transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    
+    &:invalid {
+      box-shadow: none;
+    }
 
     &:focus ~ label {
       opacity: 1;
@@ -173,7 +176,7 @@ h4 {
 
     &::placeholder {
       margin-bottom: 20px;
-      padding: 6px 0px 0px 10px;
+      padding: 0px 0px 0px 10px;
       font-size: 14px;
     }
 
@@ -202,11 +205,11 @@ h4 {
 @keyframes fadein {
   0% {
     opacity: 0;
-    pointer-events:none;
+    visibility: hidden;
   }
   100% {
     opacity: 1;
-    pointer-events:auto;
+    visibility: visible;
   }
 }
 
@@ -237,6 +240,10 @@ h4 {
   background: $brandblue;
   color: white;
 
+  &:hover {
+    cursor: pointer
+  }
+
   input {
     height: 50px;
     width: 300px;
@@ -247,7 +254,11 @@ h4 {
     font-size: 14px;
     opacity: 1;
     color: white;
-    pointer-events:none;
+    pointer-events: none;
+    
+    &:hover {
+      cursor: pointer
+    }
   }
 
 }
@@ -274,13 +285,8 @@ h4 {
 }
 
 @keyframes blueFade {
-  0% {
-    color: white;
-    pointer-events:none;
-  }
   100% {
     color: $brandblue;
-    pointer-events:auto;
   }
 }
 
@@ -579,7 +585,6 @@ h4 {
 
     input {
       -webkit-appearance: none;
-      pointer-events: auto;
     }
 
   }

@@ -30,6 +30,7 @@ window.onload = function() {
 			},
 			render: function() {
 				this.button.classList.add('fadeToBlue')
+				this.button.style.pointerEvents = "auto"
 				this.submitForm.classList.add('movedown')
 				this.inputField [0].classList.add('fadein')
 				this.inputField [1].classList.add('fadein')
@@ -51,4 +52,5 @@ window.onload = function() {
 		form.style.display = "none"
 		return false;
 	}
+
 }
